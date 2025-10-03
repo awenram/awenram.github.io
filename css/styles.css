@@ -149,7 +149,7 @@ nav a:active {
     color: var(--black50);
 }
 
-/* Hero section */
+/* Hero section 
 .hero-container {
     height: 30vh;
     min-height: 350px;
@@ -190,17 +190,18 @@ nav a:active {
     width: 25vw;
     height: auto;
 }
+    */
 
 
 /**************************************************************************************/
-
+/*
 #about h2 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Contact Page */
+/* Contact Page
 input,
 textarea {
     font: inherit;
@@ -245,7 +246,7 @@ main {
     position: relative;
     min-height: 70vh;
 }
-
+ */
 /**************************************************************************************/
 /* Footer */
 footer {
