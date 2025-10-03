@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offset Square Layout</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .wrapper {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .center-text {
+      position: absolute;
+      z-index: 2;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .wrapper img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Top row (offset to the right) */
+    .img1 { top: 0; left: 60px; }
+    .img2 { top: 0; left: 200px; }
+    .img3 { top: 0; left: 340px; }
+
+    /* Right side (offset downward) */
+    .img4 { top: 60px; right: 0; }
+    .img5 { top: 200px; right: 0; }
+    .img6 { top: 340px; right: 0; }
+
+    /* Bottom row (offset to the left) */
+    .img7 { bottom: 0; left: 60px; }
+    .img8 { bottom: 0; left: 200px; }
+    .img9 { bottom: 0; left: 340px; }
+
+    /* Left side (offset upward) */
+    .img10 { top: 60px; left: 0; }
+    .img11 { top: 200px; left: 0; }
+    .img12 { top: 340px; left: 0; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="center-text">Hello World</div>
+    
+    <!-- Top row -->
+    <img src="\images\placeholder.jpg" alt="photo1" class="img1">
+    <img src="\images\placeholder.jpg" alt="photo2" class="img2">
+    <img src="\images\placeholder.jpg" alt="photo3" class="img3">
+
+    <!-- Right side -->
+    <img src="\images\placeholder.jpg" alt="photo4" class="img4">
+    <img src="\images\placeholder.jpg" alt="photo5" class="img5">
+    <img src="\images\placeholder.jpg" alt="photo6" class="img6">
+
+    <!-- Bottom row -->
+    <img src="\images\placeholder.jpg" alt="photo7" class="img7">
+    <img src="\images\placeholder.jpg" alt="photo8" class="img8">
+    <img src="\images\placeholder.jpg" alt="photo9" class="img9">
+
+    <!-- Left side -->
+    <img src="https://via.placeholder.com/100" alt="photo10" class="img10">
+    <img src="https://via.placeholder.com/100" alt="photo11" class="img11">
+    <img src="https://via.placeholder.com/100" alt="photo12" class="img12">
+  </div>
+</body>
+</html>
