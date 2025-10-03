@@ -3,7 +3,6 @@
     --bg-clr: #F4E9D7;
     --blue-accent: #6FA4AF;
     --green-accent: #B8C4A9;
-    --gray-clr: #ede7e3;
     --black-clr: #353331;
     --black75: hsla(24, 4%, 20%, 0.75);
     --black50: hsla(24, 4%, 20%, 0.5);
@@ -16,9 +15,7 @@
     --fs-small: 0.83rem;
 }
 
-
-
-body {
+    body {
     min-height: 100vh;
     background-color: var(--bg-clr);
     font-family: "Sansation", sans-serif;
@@ -27,14 +24,6 @@ body {
     line-height: 1.4;
     text-align: center;
     }
-
-    /* body {
-    display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #F4E9D7;
-} */
 
     .wrapper {
       position: relative;
