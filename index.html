@@ -6,16 +6,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- icons -->
   <link rel="stylesheet" href="/css/styles.css">
   <title>Arlo Wengert-Ramos</title>
 </head>
 
 <body>
-    <!-- Header -->
+    <!------------------- HEADER ---------------------->
     <header id="header" class="flex-row">
-        <img src="image/tempLogo.png" alt="logo" width="300" height="300" class="logo"> <!--make this a button to go to homepage-->
+        <a href="index.html"><img src="images/tempLogo.png" alt="Arlo's logo" class="logo"></a> <!-- TBD Logo is temporary, needs updating-->
         <nav>
             <ul>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="code.html">CODING</a></li>
                 <li><a href="art.html">3D MODELS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -23,47 +25,37 @@
         </nav>
     </header>
 
-    <!-- page specific stuff -->
+    <!------------------- PAGE SPECIFIC STUFF ------------------->
     <main>
-        <div class="hero-container flex-row">
-            <section class="hero flex-column">
-                <div class="center-text">Arlo details</div>
+        <div class="hero-container"> <!--the first row, has formatting rules for smaller screens-->
+            <section class="hero-box hcolumn-a">
+                <img src="\images\placeholder.jpg" alt="photo1" class="img1"> <!-- TBD img classes don't exsist-->
+            </section>
+            <section class="hero-box hcolumn-b">  <!-- TBD actual about needed-->
+                <div class="center-text">meet</div>
                 <h1>Arlo Wengert-Ramos</h1>
                 <p>asjdfakldna sdfja djwa daw kdasldnas dasda</p>
-                
-                <!-- Pictures -->
-                <img src="\images\placeholder.jpg" alt="photo1" class="img1">
-                <img src="https://via.placeholder.com/100" alt="photo2" class="img2">
-                <img src="https://via.placeholder.com/100" alt="photo3" class="img3">
-                <img src="https://via.placeholder.com/100" alt="photo4" class="img4">
-                <img src="https://via.placeholder.com/100" alt="photo5" class="img5">
-                <img src="https://via.placeholder.com/100" alt="photo6" class="img6">
-                <img src="https://via.placeholder.com/100" alt="photo7" class="img7">
-                <img src="https://via.placeholder.com/100" alt="photo8" class="img8">
+            </section>
+            <section class="hero-box hcolumn-c">
+                <img src="https://via.placeholder.com/100" alt="photo2" class="img2">  <!-- TBD img classes don't exsist-->
             </section>
         </div>
-        <div class="content-wrapper left-column">
-            <section id="about">
-                <h2>About</h2>
-                <div>
-                    <p>Arlo is a senior at UNC Charlotte studying Computer Science with a concentration in A.I., gaming, and Robotics. He has already earned an associates in Simulation and Game Development at Central Piedmont Community College and is continuing her education at UNC Charlotte. She is proficient in 3d modeling and printing, rigging, 2D and 3D animation, game design, and both frontend and backend design. She loves working with augmented and virtual reality, and hopes to have a career as a 3d artist.</p>
-                    <br>
-                    <P>Arlo also has a cat, as seen above. Her name is Burnt Rotisserie Chicken, and she is very fat. Her diet is not working, so please contact Arlo if you have advice.</P>
-                </div>
-            </section>
+        <div class="">
+            <!--TBD the rest of the content will go here, horizontal masrony style-->
         </div>
+
     </main>
 
-
-
-  <footer>
+    <!------------------- FOOTER ---------------------->
+    <footer>
         <ul>
             <li><a href="code.html">CODING</a></li>
             <li><a href="art.html">3D MODELS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
         <p class="small">Last Updated October 2025</p>
-  </footer>
+        <a href="#header" class="top"><div><i class="fa-solid fa-arrow-up"></i></div></a> <!-- jump back to top button. is visible on whole page. keep or no? -->
+    </footer>
 
 </body>
 </html>
