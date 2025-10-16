@@ -1,0 +1,205 @@
+/************** Global Variables **************/
+    :root {
+    --orange-clr: #D97D55;
+    --bg-clr: #F4E9D7;
+    --blue-accent: #6FA4AF;
+    --green-accent: #B8C4A9;
+    --black-clr: #222120;
+    --black75: hsla(24, 4%, 20%, 0.75);
+    --black50: hsla(24, 4%, 20%, 0.5); /* not yet in use */
+    --fs-h1: 2.488rem; /* not yet in use */
+    --fs-h2: 2.074rem; /* not yet in use */
+    --fs-h3: 1.728rem; /* not yet in use */
+    --fs-h4: 1.44rem; /* not yet in use */
+    --fs-h5: 1.2rem;
+    --fs-h6: 1rem; /* not yet in use */
+    --fs-small: 0.83rem; /* not yet in use */
+    scroll-behavior: smooth;
+    }
+
+
+/************** General Styles **************/
+    body {
+    min-height: 100vh;
+    background-color: var(--bg-clr);
+    font-family: "Sansation", sans-serif;
+    color: var(--black-clr);
+    font-size: 1.1rem;
+    line-height: 1.4;
+    text-align: center;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    a { /* link styles */
+    text-decoration: none;
+    color: var(--black-color);
+    }
+    .flex-row { /* full page row formatting, used for header+footer */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    }
+    .left-text {
+        text-align: left;
+    }
+    .center-text {
+        text-align: center;
+    }
+    h4 {
+        font-size:var(--fs-h4);
+        font-weight: 400;
+    }
+    
+
+    
+
+
+/************** Header **************/
+    header { 
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+    .logo {
+        height: 60px;
+        width: auto;
+    }
+    li { /* list of links */
+        display: inline;
+        padding: .5rem;
+    }
+    nav a { /* font size of list */
+        font-size: var(--fs-h5);
+    }
+    nav a:hover { /* color on hover */
+        color: var(--black75);
+    }
+    nav a:active { /* color on click */
+        color: var(--black75);
+    }
+
+
+/************** Main **************/
+    main { /* top right bottom left */
+        margin: 1.5rem 2rem 5rem 2rem;
+    }
+
+    /* Normal screen layout */
+    .hero-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem; /* around container */
+    }
+    .hero-box {
+    flex: 1 1 300px; /* grow/shrink, base width TBD */
+    max-width: 500px; /* stop growing TBD */
+    padding: 20px;
+    text-align: center;
+    /*border: 1px solid #999;  TBD temporary, for preview purposes */
+    }
+    /* Shifted layout for smaller screens - TBD FIGURE OUT WHAT THE WIDTH SHOULD BE */
+    @media screen and (max-width: 600px) {
+        .hero-container {
+            flex-direction: column;
+            align-items: center; /* keep boxes centered */
+        }
+        /* Stacking order for smaller screen */
+        .hcolumn-b { order: 1; }
+        .hcolumn-a { order: 2; }
+        .hcolumn-c { order: 3; }
+    }
+    .hero-img {
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    
+    /* For stacked name */
+    .name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    }
+    .name-big {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: auto;/* min/pref/max */
+    height: auto;
+    font-size: 7rem;/* min/pref/max */
+    font-weight: 650;
+    line-height: 1;
+    }
+    .name-small {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: auto;/* min/pref/max */
+    height: auto;
+    font-size: 3rem;/* min/pref/max */
+    font-weight: 650;
+    line-height: 1;
+    }
+    .name-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: center;
+    }
+    .subtitle {
+        font-size: 1.8rem;/* min/pref/max */
+    }
+    
+    /* TBD horizontal masonry for remaining items */
+    .masonry-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 50px 5px; /*min row column spacing */
+    }
+    .masonry {
+        max-height: 500px;
+        max-width: 800px;
+    }
+
+
+
+
+/************** Footer **************/
+    footer {
+        background-color: var(--orange-clr);
+        color: var(--black-clr);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        position: relative;
+    }
+    footer ul { /* list of links */
+        display: flex;
+    }
+    .top { /* back to top button */
+        padding: 1em 1.5em 1em 1.5em;
+        background-color: var(--black50);
+        color: var(--blue-accent); /* TBD change color? */
+        font-weight: 700;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    footer a:hover { /* color on hover */
+        color: var(--black75);
+    }
+    footer a:active { /* color on click */
+        color: var(--black75);
+    }
