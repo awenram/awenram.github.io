@@ -66,6 +66,7 @@
     .logo {
         height: 60px;
         width: auto;
+        border-radius: 15px;
     }
     li { /* list of links */
         display: inline;
@@ -79,6 +80,9 @@
     }
     nav a:active { /* color on click */
         color: var(--black75);
+    }
+    .nav-head {
+        white-space: nowrap;
     }
 
 
@@ -118,6 +122,10 @@
         margin: auto;
         display: block;
     }
+    .hcolumn-a, .hcolumn-c {
+        font-style: italic;
+        font-size: smaller;
+    }
 
     
     /* For stacked name */
@@ -154,20 +162,109 @@
     justify-content: center;
     }
     .subtitle {
-        font-size: 1.8rem;/* min/pref/max */
+        font-size: 1.8rem;
     }
-    
-    /* TBD horizontal masonry for remaining items */
+    .about {
+        font-size: .9rem;
+        margin-top: .4rem;
+    }
+
+    /* home page items */
     .masonry-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
         gap: 50px 5px; /*min row column spacing */
+        font-style: italic;
+        font-size: smaller;
     }
     .masonry {
         max-height: 500px;
         max-width: 800px;
+        
+    }
+
+    /* sub page items */
+    .page-title-container {
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem; /* around container */
+    }
+    .page-title {
+    display: block;
+    align-items: center;
+    justify-content: left;
+    width: auto;/* min/pref/max */
+    height: auto;
+    font-size: 4rem;/* min/pref/max */
+    font-weight: 650;
+    line-height: 1;
+    }
+    .showcase-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .showcase-item {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: var(--green-accent);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        width: 250px;
+        height: auto;
+        margin: 15px 8px;
+        
+    }
+    .showcase-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    .thumbnail {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+        margin: 0 auto;
+    }
+    .showcase-text {
+        padding: 0rem 1rem;
+        text-align: center;
+    }
+    .title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--black-clr);
+    }
+    .caption {
+        font-size: 0.95rem;
+        color: var(--black75);
+    }
+    
+
+/************** EGG ONLY **************/
+    .egg-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .egg-img {
+        max-width: 300px;
+        max-height: auto;
+        margin: 3px;
+    }
+    .egg {
+        color: var(--orange-clr);
+    }
+    .egg:hover {
+        color: var(--blue-accent);
     }
 
 
@@ -182,24 +279,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
         position: relative;
     }
     footer ul { /* list of links */
         display: flex;
+        align-items: center;
     }
     .top { /* back to top button */
         padding: 1em 1.5em 1em 1.5em;
         background-color: var(--black50);
-        color: var(--blue-accent); /* TBD change color? */
+        color: var(--black75); /* TBD change color? */
         font-weight: 700;
         position: fixed;
         bottom: 0;
         right: 0;
     }
     footer a:hover { /* color on hover */
-        color: var(--black75);
+        color: var(--blue-accent);
     }
     footer a:active { /* color on click */
-        color: var(--black75);
+        color: var(--blue-accent);
     }
