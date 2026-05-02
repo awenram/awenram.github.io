@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="/css/styles.css">
   <title>Arlo Wengert-Ramos | Contact</title>
 </head>
@@ -15,7 +16,10 @@
     <header id="header" class="flex-row">
         <a href="index.html"><img src="media/ArloLogo.png" alt="logo" class="logo"></a>
         <nav>
-            <ul>
+            <button class="hamburger-btn" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="nav-menu">
                 <li class="nav-head"><a href="index.html">HOME</a></li>
                 <li class="nav-head"><a href="code.html">CODING</a></li>
                 <li class="nav-head"><a href="art.html">3D MODELS</a></li>
@@ -61,5 +65,29 @@
         <p class="date-stamp">Last Updated May 2026</p>
     </footer>
 
-</body>
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('nav')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </html>
