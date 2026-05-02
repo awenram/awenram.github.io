@@ -1,32 +1,26 @@
 /************** Global Variables **************/
     :root {
-    --orange-clr: #D97D55;
-    --bg-clr: #F4E9D7;
-    --blue-accent: #6FA4AF;
-    --green-accent: #B8C4A9;
-    --black-clr: #222120;
-    --black75: hsla(24, 4%, 20%, 0.75);
-    --black50: hsla(24, 4%, 20%, 0.5); /* not yet in use */
-    --fs-h1: 2.488rem; /* not yet in use */
-    --fs-h2: 2.074rem; /* not yet in use */
-    --fs-h3: 1.728rem; /* not yet in use */
-    --fs-h4: 1.44rem; /* not yet in use */
-    --fs-h5: 1.2rem;
-    --fs-h6: 1rem; /* not yet in use */
-    --fs-small: 0.83rem; /* not yet in use */
-    scroll-behavior: smooth;
+        --orange-color: #D97D55;
+        --bg-color: #F4E9D7;
+        --blue-accent: #70bed3;
+        --green-accent: #B8C4A9;
+        --black-color: #222120;
+        --black75: hsla(24, 4%, 20%, 0.75);
+        --black25: hsla(24, 4%, 20%, 0.25);
+        --fs-h2: 1.2rem;
+        scroll-behavior: smooth;
     }
 
 
 /************** General Styles **************/
     body {
-    min-height: 100vh;
-    background-color: var(--bg-clr);
-    font-family: "Sansation", sans-serif;
-    color: var(--black-clr);
-    font-size: 1.1rem;
-    line-height: 1.4;
-    text-align: center;
+        min-height: 100vh;
+        background-color: var(--bg-color);
+        font-family: "Sansation", sans-serif;
+        color: var(--black-color);
+        font-size: 1.1rem;
+        line-height: 1.4;
+        text-align: center;
     }
     * {
         padding: 0;
@@ -34,13 +28,13 @@
         box-sizing: border-box;
     }
     a { /* link styles */
-    text-decoration: none;
-    color: var(--black-color);
+        text-decoration: none;
+        color: var(--black-color);
     }
     .flex-row { /* full page row formatting, used for header+footer */
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1rem;
     }
     .left-text {
         text-align: left;
@@ -49,7 +43,6 @@
         text-align: center;
     }
     h4 {
-        font-size:var(--fs-h4);
         font-weight: 400;
     }
     
@@ -73,13 +66,13 @@
         padding: .5rem;
     }
     nav a { /* font size of list */
-        font-size: var(--fs-h5);
+        font-size: var(--fs-h2);
     }
     nav a:hover { /* color on hover */
-        color: var(--black75);
+        color: var(--blue-accent);
     }
     nav a:active { /* color on click */
-        color: var(--black75);
+        color: var(--blue-accent);
     }
     .nav-head {
         white-space: nowrap;
@@ -93,23 +86,22 @@
 
     /* Normal screen layout */
     .hero-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1rem; /* around container */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem;
     }
     .hero-box {
-    flex: 1 1 300px; /* grow/shrink, base width TBD */
-    max-width: 500px; /* stop growing TBD */
-    padding: 20px;
-    text-align: center;
-    /*border: 1px solid #999;  TBD temporary, for preview purposes */
+        flex: 1 1 300px; /* grow/shrink, base width */
+        max-width: 500px;
+        padding: 20px;
+        text-align: center;
     }
-    /* Shifted layout for smaller screens - TBD FIGURE OUT WHAT THE WIDTH SHOULD BE */
-    @media screen and (max-width: 600px) {
+    /* Shifted layout for smaller screens */
+    @media screen and (max-width: 900px) {
         .hero-container {
             flex-direction: column;
-            align-items: center; /* keep boxes centered */
+            align-items: center;
         }
         /* Stacking order for smaller screen */
         .hcolumn-b { order: 1; }
@@ -121,6 +113,7 @@
         max-height: 100%;
         margin: auto;
         display: block;
+        border-radius: 10px;
     }
     .hcolumn-a, .hcolumn-c {
         font-style: italic;
@@ -130,36 +123,36 @@
     
     /* For stacked name */
     .name-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
     }
     .name-big {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    width: auto;/* min/pref/max */
-    height: auto;
-    font-size: 7rem;/* min/pref/max */
-    font-weight: 650;
-    line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: auto;
+        height: auto;
+        font-size: 7rem;
+        font-weight: 650;
+        line-height: 1;
     }
     .name-small {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    width: auto;/* min/pref/max */
-    height: auto;
-    font-size: 3rem;/* min/pref/max */
-    font-weight: 650;
-    line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: auto;
+        height: auto;
+        font-size: 3rem;
+        font-weight: 650;
+        line-height: 1;
     }
     .name-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-    justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        justify-content: center;
     }
     .subtitle {
         font-size: 1.8rem;
@@ -181,26 +174,26 @@
     }
     .masonry {
         max-height: 500px;
-        max-width: 800px;
-        
+        max-width: 100%;;
+        border-radius: 10px;
     }
 
     /* sub page items */
     .page-title-container {
-    display: block;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1rem; /* around container */
+        display: block;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem; /* around container */
     }
     .page-title {
-    display: block;
-    align-items: center;
-    justify-content: left;
-    width: auto;/* min/pref/max */
-    height: auto;
-    font-size: 4rem;/* min/pref/max */
-    font-weight: 650;
-    line-height: 1;
+        display: block;
+        align-items: center;
+        justify-content: left;
+        width: auto;
+        height: auto;
+        font-size: 4rem;
+        font-weight: 650;
+        line-height: 1.5;
     }
     .showcase-container {
         display: flex;
@@ -223,7 +216,8 @@
     }
     .showcase-item:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+        box-shadow: 0 10px 20px #d97d5593;
+        
     }
     .thumbnail {
         width: 200px;
@@ -234,19 +228,87 @@
         margin: 0 auto;
     }
     .showcase-text {
-        padding: 0rem 1rem;
+        padding: 0rem .5rem;
         text-align: center;
+        line-height: 1.2;
     }
     .title {
         font-size: 1.25rem;
         font-weight: 600;
-        color: var(--black-clr);
+        color: var(--black-color);
     }
     .caption {
         font-size: 0.95rem;
         color: var(--black75);
     }
-    
+
+    /* Specifically About page stuff */
+    .bio-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        align-items:stretch;
+        padding: 2rem;
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+    .bio-pic {
+        width:100%;
+        height:auto;
+        min-width: 350px;
+        min-height:420px;
+        object-fit:cover;
+        border-radius:20px;
+    }
+    .bio-blurb {
+        background: var(--orange-color);
+        padding: 40px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    @media(max-width:750px){
+        .bio-container {display: grid; grid-template-columns: 1fr;}
+        .bio-blurb {font-size: 1.25rem;}
+        .bio-pic {min-width: 100%;}
+    }
+    @media(min-width:1000px){
+        .bio-blurb {font-size: 1.5rem;}
+    }
+    @media (min-width: 1701px) {
+        .bio-container {max-width: 1700px; justify-content: space-evenly; margin: auto;}
+    }
+    .resume-section {
+        margin: 2rem;
+        padding: 20px;
+    }
+    .bio-icon {
+        color: var(--blue-accent);
+        margin: 0px 20px 20px 20px;
+    }
+    .resume-item {
+        text-align: left;
+        line-height: 2;
+    }
+    .role-title {
+        font-size: larger;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    .role-subtitle {
+        font-style: italic;
+        font-size: smaller;
+    }
+    .resume-list {
+        text-align: left;
+        list-style: circle;
+    }
+    .resume-list li {
+        display: list-item;
+        margin-left: 40px;
+    }
 
 /************** EGG ONLY **************/
     .egg-gallery {
@@ -261,19 +323,17 @@
         margin: 3px;
     }
     .egg {
-        color: var(--orange-clr);
+        color: var(--orange-color);
     }
     .egg:hover {
         color: var(--blue-accent);
     }
 
 
-
-
 /************** Footer **************/
     footer {
-        background-color: var(--orange-clr);
-        color: var(--black-clr);
+        background-color: var(--orange-color);
+        color: var(--black-color);
         padding: 1rem;
         display: flex;
         flex-direction: column;
@@ -285,18 +345,50 @@
         display: flex;
         align-items: center;
     }
-    .top { /* back to top button */
-        padding: 1em 1.5em 1em 1.5em;
-        background-color: var(--black50);
-        color: var(--black75); /* TBD change color? */
-        font-weight: 700;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-    }
     footer a:hover { /* color on hover */
         color: var(--blue-accent);
     }
     footer a:active { /* color on click */
         color: var(--blue-accent);
+    }
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        border-radius: 50%;
+    }
+    .icon:hover {
+        background-color: var(--blue-accent);
+    }
+    .date-stamp {
+        font-size: .8rem;
+        font-style: italic;
+    }
+
+/************** Back to Top Button **************/
+    .to-top {
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--black25);
+        color: var(--black75);
+        font-weight: 700;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        border: none;
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+    .to-top:hover {
+        color: var(--blue-accent);
+    }
+    .to-top:active {
+        color: var(--blue-accent);
+    }
+    .to-top.show {
+        display: flex;
     }
